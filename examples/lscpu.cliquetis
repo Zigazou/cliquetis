@@ -1,0 +1,49 @@
+#!/usr/bin/env cliquetis
+{
+  "title": "Lscpu",
+  "description": "Display information about the CPU architecture.",
+  "actions": [
+    {
+      "name": "Go",
+      "command": [
+        "lscpu",
+        "--json",
+        "{bytes}",
+        "{caches}",
+        "{output-all}"
+      ],
+      "output": {
+        "viewer": "json",
+        "collapsed": false,
+        "key-values": [
+          "field",
+          "data"
+        ]
+      },
+      "description": "Run the program",
+      "options": {
+        "bytes": {
+          "name": "Print the sizes in bytes",
+          "type": "boolean",
+          "true": "--bytes",
+          "false": null,
+          "default": false
+        },
+        "caches": {
+          "name": "Display details about CPU caches",
+          "type": "boolean",
+          "true": "--caches",
+          "false": null,
+          "default": false
+        },
+        "output-all": {
+          "name": "Output all available columns",
+          "type": "boolean",
+          "true": "--output-all",
+          "false": null,
+          "default": false
+        }
+      }
+    }
+  ]
+}

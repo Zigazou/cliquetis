@@ -1,0 +1,37 @@
+#!/usr/bin/env cliquetis
+{
+  "title": "Locks",
+  "description": "lists information about all the currently held file locks in a Linux system.",
+  "actions": [
+    {
+      "name": "Go",
+      "command": [
+        "lslocks",
+        "--raw",
+        "{truncate}",
+        "{output-all}"
+      ],
+      "output": {
+        "viewer": "table",
+        "separator": " "
+      },
+      "description": "Run the program",
+      "options": {
+        "truncate": {
+          "name": "Truncate text in columns",
+          "type": "boolean",
+          "true": null,
+          "false": "--notruncate",
+          "default": true
+        },
+        "output-all": {
+          "name": "Output all available columns",
+          "type": "boolean",
+          "true": "--output-all",
+          "false": null,
+          "default": false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+#!/usr/bin/env cliquetis
+{
+  "title": "Lscpu",
+  "description": "Display information about the CPU architecture.",
+  "actions": [
+    {
+      "name": "Go",
+      "command": [
+        "lsirq",
+        "--json"
+      ],
+      "output": {
+        "viewer": "json",
+        "collapsed": false,
+        "key-values": [
+          "irq",
+          "total",
+          "name"
+        ]
+      },
+      "description": "Run the program",
+      "options": {}
+    }
+  ]
+}

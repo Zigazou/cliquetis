@@ -1,0 +1,29 @@
+#!/usr/bin/env cliquetis
+{
+  "title": "Lsblk",
+  "description": "List block devices.",
+  "actions": [
+    {
+      "name": "Go",
+      "command": [
+        "lsblk",
+        "--json",
+        "{output-all}"
+      ],
+      "output": {
+        "viewer": "json",
+        "collapsed": false
+      },
+      "description": "Run the program",
+      "options": {
+        "output-all": {
+          "name": "Output all available columns",
+          "type": "boolean",
+          "true": "--output-all",
+          "false": null,
+          "default": false
+        }
+      }
+    }
+  ]
+}

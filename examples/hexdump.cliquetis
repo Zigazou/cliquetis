@@ -1,0 +1,41 @@
+#!/usr/bin/env cliquetis
+{
+  "title": "HexDump",
+  "description": "Hexadecimal dump of a file - The hexdump utility is a filter which displays the specified files, or standard input if no files are specified, in a user-specified format.",
+  "actions": [
+    {
+      "name": "Go",
+      "command": [
+        "hexdump",
+        "{squeezing}",
+        "{canonical}",
+        "{file}"
+      ],
+      "output": {
+        "viewer": "multiline"
+      },
+      "description": "Run the program",
+      "options": {
+        "file": {
+          "name": "File to dump",
+          "required": true,
+          "type": "file"
+        },
+        "canonical": {
+          "name": "Canonical display",
+          "type": "boolean",
+          "true": "--canonical",
+          "false": null,
+          "default": false
+        },
+        "squeezing": {
+          "name": "Squeeze multiple identical lines",
+          "type": "boolean",
+          "true": null,
+          "false": "--no-squeezing",
+          "default": true
+        }
+      }
+    }
+  ]
+}

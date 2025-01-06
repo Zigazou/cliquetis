@@ -1,0 +1,30 @@
+#!/usr/bin/env cliquetis
+{
+  "title": "File descriptors",
+  "description": "List file descriptors.",
+  "actions": [
+    {
+      "name": "Go",
+      "command": [
+        "lsfd",
+        "--raw",
+        "{truncate}"
+      ],
+      "output": {
+        "viewer": "table",
+        "separator": " ",
+        "group-by": 0
+      },
+      "description": "Run the program",
+      "options": {
+        "truncate": {
+          "name": "Truncate text in columns",
+          "type": "boolean",
+          "true": null,
+          "false": "--notruncate",
+          "default": true
+        }
+      }
+    }
+  ]
+}

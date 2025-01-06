@@ -1,0 +1,37 @@
+#!/usr/bin/env cliquetis
+{
+  "title": "Lsmem",
+  "description": "List the ranges of available memory with their online status.",
+  "actions": [
+    {
+      "name": "Go",
+      "command": [
+        "lsmem",
+        "--json",
+        "{all}",
+        "{output-all}"
+      ],
+      "output": {
+        "viewer": "json",
+        "collapsed": false
+      },
+      "description": "Run the program",
+      "options": {
+        "all": {
+          "name": "List each individual memory block",
+          "type": "boolean",
+          "true": "--all",
+          "false": null,
+          "default": false
+        },
+        "output-all": {
+          "name": "Output all available columns",
+          "type": "boolean",
+          "true": "--output-all",
+          "false": null,
+          "default": false
+        }
+      }
+    }
+  ]
+}
