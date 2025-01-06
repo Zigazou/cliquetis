@@ -45,6 +45,15 @@ Usage
 ./cliquetis.py <configuration.json>
 ```
 
+Examples
+--------
+
+The `examples` directory contains examples of Cliquetis files.
+
+![HexDump settings window capture](img/hexdump-settings.png)
+
+![HexDump result window capture](img/hexdump-result.png)
+
 Advanced features
 -----------------
 
